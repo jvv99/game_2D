@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8 Ball Pool - 2 Players</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game-shell">
+
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">8 BALL</div>
+        <h1>POOL DUEL</h1>
+      </div>
+
+      <div class="turn-card">
+        <span>VEZ DE</span>
+        <strong id="turnName">Jogador 1</strong>
+      </div>
+
+      <button id="newGameBtn" class="new-game">
+        NOVA PARTIDA
+      </button>
+    </header>
+
+    <main class="game-area">
+
+      <section class="player-panel player-one active" id="player1Panel">
+        <div class="avatar">1</div>
+
+        <div class="player-info">
+          <strong>JOGADOR 1</strong>
+          <span id="type1">Definição: aguardando</span>
+        </div>
+
+        <div class="score" id="score1">0</div>
+      </section>
+
+      <div class="table-wrap">
+
+        <div class="table-shadow"></div>
+
+        <div class="table">
+          <div class="felt">
+            <canvas id="gameCanvas" width="1100" height="600"></canvas>
+          </div>
+        </div>
+
+        <div class="aim-help">
+          <span>🖱️ Mire</span>
+          <span>Segure e arraste para definir a força</span>
+          <span>Solte para tacar</span>
+        </div>
+
+      </div>
+
+      <section class="player-panel player-two" id="player2Panel">
+
+        <div class="avatar">2</div>
+
+        <div class="player-info">
+          <strong>JOGADOR 2</strong>
+          <span id="type2">Definição: aguardando</span>
+        </div>
+
+        <div class="score" id="score2">0</div>
+
+      </section>
+
+    </main>
+
+    <footer class="bottom-panel">
+
+      <div class="status" id="status">
+        Jogador 1 começa. Mire e arraste para dar a tacada.
+      </div>
+
+      <div class="power-control">
+        <span>FORÇA</span>
+
+        <div class="power-bar">
+          <div id="powerFill"></div>
+        </div>
+      </div>
+
+      <div class="rules">
+        <span class="solid-dot"></span> Lisas
+        <span class="stripe-dot"></span> Listradas
+        <span class="black-dot"></span> Bola 8
+      </div>
+
+    </footer>
+
+  </div>
+
+  <div class="overlay hidden" id="messageOverlay">
+
+    <div class="modal">
+
+      <div class="modal-kicker">
+        PARTIDA ENCERRADA
+      </div>
+
+      <h2 id="winnerTitle">
+        Jogador 1 venceu!
+      </h2>
+
+      <p id="winnerText"></p>
+
+      <button id="restartBtn">
+        JOGAR NOVAMENTE
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
